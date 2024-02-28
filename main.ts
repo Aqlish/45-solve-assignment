@@ -1,9 +1,18 @@
-// lower case ;
-let personName: string ="Aqsa khan"
-console.log("lowercase", personName.tolowerCase{});
+// task 45
 
-// upper case
-console.log("uppercase:", personName.tolowerCase{});
 
-// Title case
-console.log("titlecase:", personName.replace(/\bw/g,c => c.toUpperCase()));
+type car = {
+    manufacture: String
+    model: string
+    [key: string]: any;
+}
+
+function createCar(manufacture: string, model: string, optional: Record<string, any>): car {
+    return{
+        manufacture,
+        model,
+        ...optional
+    }
+}
+const mycar: car = createCar("toyota","corolla", { color: "sliver", year: "2024"})
+console.log(mycar)
